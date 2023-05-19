@@ -1,0 +1,50 @@
+
+.navbar{
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid rgb(255,255,255,0.25);
+}
+
+.navbar >.nav-section{
+    padding: 3rem 2rem;
+    display: flex;
+    gap: 1rem;
+    border-left: 1px solid rgb(255,255,255,0.15);
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-section{
+    font-family: f1-regular;
+    font-weight: 400;
+    color: white;
+    transition: background-color 0.1s;
+}
+
+.navbar>.logo{
+    flex-basis: calc(100%/9) ;
+    justify-content: flex-start;
+}
+
+.navbar>.about{
+    flex-basis: calc(100%/8) ;
+}
+
+.navbar>.exams{
+    flex-basis: calc(100%/8) ;
+}
+
+
+.navbar>.socials{
+    flex-basis: calc(100%/4) ;
+}
+
+.nav-section:hover{
+    cursor: pointer;
+    background-color: red;
+}
+
+.logo>img{
+    width: 40x;
+    height: 40px;
+}

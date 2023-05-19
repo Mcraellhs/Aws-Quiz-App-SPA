@@ -1,0 +1,21 @@
+.home{
+    margin-top: 5%;
+    width: 80%;
+    
+    justify-content: center;
+}
+
+.home>span{
+    font-size: 25px;
+}
+.home>h2{
+    font-size: 30px;
+}
+
+.home>p{
+    font-size: 23px;
+}
+
+span>.green{
+    color: greenyellow;
+}
