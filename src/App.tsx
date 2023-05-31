@@ -10,6 +10,8 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import PracticeSet from './pages/PracticeSet';
 import Dashboard from './pages/Dashboard';
+import Quiz from './pages/Quiz';
+import CreatePracticeSet from './pages/CreatePracticeSet';
 
 function App() {
 
@@ -57,8 +59,10 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/about' element={<About/>}/>
           <Route path='/contact' element={<Contact/>}/>
-          <Route path='/practice-set' element={<PracticeSet/>}/>
+          <Route path='/quiz' element={<Quiz/>}/>
           <Route path='/dashboard' element={<Dashboard/>}/>
+          <Route path='/dashboard/practice-set' element={<PracticeSet/>}/>
+          <Route path='/dashboard/practice-set/create' element={<CreatePracticeSet/>}/>
         </Routes>
       </Router>
                   </div>
