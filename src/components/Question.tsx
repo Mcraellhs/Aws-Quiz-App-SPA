@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { QuestionDTO } from '../models/QuestionDTO'
+import { QuestionForQuiz } from '../models/QuestionForQuizDTO'
 import QuestionPreview from './QuestionPreview'
+import { QuestionDTO } from '../models/QuestionDTO';
 
 export default function Question(question:QuestionDTO) {
     const [isToggled,setIsToggled]=useState(false);

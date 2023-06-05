@@ -1,0 +1,30 @@
+.create-question-form>form{
+    border: 1px solid white;
+    min-width: 400px;
+    min-height: 500px;
+}
+.create-question-form>form>input{
+    width: 100%;
+    margin-top: 5px;
+}
+
+.input-text{
+    width: 100% !important;
+}
+
+.form-group {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .form-group>.question-title{
+    height: 50px;
+    width: 150px;
+    margin-left: 20px ;
+  }
+ 
+  .question-explanation{
+    width: 100%;
+    height: 100px;
+    margin: 20px;
+  }

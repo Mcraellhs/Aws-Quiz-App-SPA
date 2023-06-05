@@ -3,7 +3,7 @@ import { BrowserRouter as Router,Route,Routes } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
 import Loading from './components/Loading';
-import { QuestionDTO } from './models/QuestionDTO';
+import { QuestionForQuiz } from './models/QuestionForQuizDTO';
 import { quizService } from './services/QuizService';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -12,11 +12,14 @@ import PracticeSet from './pages/PracticeSet';
 import Dashboard from './pages/Dashboard';
 import Quiz from './pages/Quiz';
 import CreatePracticeSet from './pages/CreatePracticeSet';
+import Questions from './pages/Questions';
+import CreateQuestion from './pages/CreateQuestion';
+import ListOfQuestions from './pages/ListOfQuestions';
 
 function App() {
 
   const [isLoading,setIsLoading] = useState<boolean>(true);
-  const [questions,setQuestions]=useState<QuestionDTO[]>([]);
+  const [questions,setQuestions]=useState<QuestionForQuiz[]>([]);
 
   useEffect(()=>{
     quizService.getQuestions().then((x)=>{
@@ -63,6 +66,9 @@ function App() {
           <Route path='/dashboard' element={<Dashboard/>}/>
           <Route path='/dashboard/practice-set' element={<PracticeSet/>}/>
           <Route path='/dashboard/practice-set/create' element={<CreatePracticeSet/>}/>
+          <Route path='/dashboard/questions' element={<Questions/>}/>
+          <Route path='/dashboard/questions/list' element={<ListOfQuestions/>}/>
+          <Route path='/dashboard/questions/create' element={<CreateQuestion/>}/>
         </Routes>
       </Router>
                   </div>

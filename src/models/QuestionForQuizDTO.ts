@@ -1,9 +1,8 @@
 import { Answer } from "./Answer"
 
-export interface QuestionDTO{
+export interface QuestionForQuiz{
     id:string,
     title:string
     answers:Answer[],
-    correctAnswers:Answer[],
     multipleAnswers:false
 }

@@ -3,12 +3,14 @@ import '../css/create-practice-set.css'
 import Question from '../components/Question'
 import QuestionPreview from '../components/QuestionPreview'
 import { quizService } from '../services/QuizService';
+import { QuestionForQuiz } from '../models/QuestionForQuizDTO';
 import { QuestionDTO } from '../models/QuestionDTO';
+import { questionService } from '../services/QuestionService';
 export default function CreatePracticeSet() {
     const [questions,setQuestions]=useState<QuestionDTO[]>([]);
 
     useEffect(()=>{
-      quizService.getQuestions().then((x)=>{
+      questionService.getAllQuestions().then((x)=>{
        setQuestions(x.data);
       })
     },[])
