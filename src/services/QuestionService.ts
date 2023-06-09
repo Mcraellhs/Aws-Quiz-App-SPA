@@ -6,10 +6,9 @@ class QuestionService{
 
     private API_URL:string="http://localhost:8080/question"
 
-    constructor(){}
-
     getAllQuestions(){
-      return axios.get(this.API_URL+"/all");
+      const encodedUrl = `http://localhost:8080/question/all`;
+      return axios.get(encodedUrl);
     }
 
     addQuestion(question:QuestionForAddDTO){

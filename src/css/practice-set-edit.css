@@ -1,0 +1,31 @@
+.practice-set-edit-section{
+    display: flex;
+    flex-direction: column;
+   
+    width: 100%;
+}
+
+.practice-set-edit-question-block{
+   display: flex;
+    margin: 10px;
+    border: 1px solid white;
+    min-height: 80px;
+    align-items: center;
+    gap: 10px;
+    text-overflow: ellipsis;
+}
+.practice-set-edit-question-block>button{
+    height: 100%;
+}
+
+.save-practice-set{
+    position:absolute;
+    height: 50px;
+    width: 100px;
+    background-color: rgb(119, 251, 112);
+    border: 0;
+    border-radius: 20px;
+    right: 10px;
+    top: 0;
+  
+}

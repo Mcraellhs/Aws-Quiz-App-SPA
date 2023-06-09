@@ -19,3 +19,27 @@
     background-color: red;
     cursor: pointer;
 }
+
+.practice-set-preview{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    top: 20%;
+    right: 30%;
+    width: 600px;
+    height: 600px;
+    z-index: 5;
+    background-color: rgb(167, 167, 167);
+}
+
+.practice-set-preview>form{
+    margin: 10px;
+}
+
+.practice-set-list>.practic-set-block{
+   height: 100px; 
+   display: flex;
+   align-items: center;
+   border: 1px solid white;
+   gap:50px
+}
