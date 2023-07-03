@@ -71,8 +71,8 @@ function App() {
                   
                   {selector.practiceSets.map((x: any) => {
                     return (
-                      <Link style={{ textDecoration: 'none' }} to={"/quiz/practice-set/"+x.id}>
-                      <div key={x.id} className="practice-set">
+                      <Link key={x.id} style={{ textDecoration: 'none' }} to={"/quiz/practice-set/"+x.id}>
+                      <div  className="practice-set">
                         <h1>{x.title}</h1>
                         <span> {x.difficulty}</span>
                       </div>

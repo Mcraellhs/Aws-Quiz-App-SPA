@@ -1,0 +1,48 @@
+.quiz-question-component{
+    display: block;
+    position: relative;
+    max-height: 500px;
+    width: 500px;
+}
+
+.quiz-question-block{
+    margin-top: 30px;
+    height: 100%;
+}
+
+.quiz-question-block-btns{
+    position: relative;
+    display: flex;
+    background-color: bisque;
+}
+
+.quiz-question-block-btns>.submit{
+   position: absolute;
+   right: 0px;
+}
+
+.question-answer{
+    margin: 1px;
+    max-width: 80px;
+}
+
+.quiz-question-block-answers{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: absolute;
+    top: 120px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 5px;
+}
+
+.quiz-question-block-answers>div{
+  margin-bottom: 20px;
+  margin-right: 10px;
+
+}
+
+.checkbox-pop{
+    background-color: rgb(3, 220, 3); /* Change the background color when checked */
+    border: 2px solid black;
+}
