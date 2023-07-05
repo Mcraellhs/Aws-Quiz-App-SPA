@@ -22,6 +22,7 @@ import PracticeSetEdit from './pages/PracticeSetEdit';
 import QuestionPreview from './components/QuestionPreview';
 import { addQuestionToSingleSet, getPracticeSets } from './redux-slice/PracticeSetSlice';
 import { Link } from 'react-router-dom';
+import Result from './pages/Result';
 
 function App() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -122,6 +123,7 @@ function App() {
                   <Route path="/dashboard/questions" element={<Questions />} />
                   <Route path="/dashboard/questions/list" element={<ListOfQuestions />} />
                   <Route path="/dashboard/questions/create" element={<CreateQuestion />} />
+                  <Route path="/result" element={<Result />} />
                 </Routes>
               </div>
             )}

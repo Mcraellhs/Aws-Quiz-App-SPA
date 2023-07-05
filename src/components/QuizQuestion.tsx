@@ -3,6 +3,10 @@ import { QuestionForQuiz } from '../models/QuestionForQuizDTO'
 import { Answer } from '../models/Answer';
 import '../css/quiz-question.css'
 import axios from 'axios';
+import { QuizSubmitData } from '../models/QuizSubmitData';
+import { useDispatch } from 'react-redux';
+import { submitQuiz } from '../redux-slice/QuizSlice';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 interface Props {
   questions: QuestionForQuiz[]
@@ -10,6 +14,8 @@ interface Props {
 
 export default function QuizQuestion({ questions }: Props) {
 
+  const dispatch = useDispatch<any>();
+  const navigate = useNavigate();
   const [questionToDisplay, setQuestionToDisplay] = useState<{ question: QuestionForQuiz, selectedAnswers: Answer[] }[]>([]);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
@@ -56,13 +62,8 @@ export default function QuizQuestion({ questions }: Props) {
   }
 
   const handleSubmit = () => {
-    console.log(questionToDisplay);
 
-    const bodyData:{
-      id:string,
-      title:string,
-      selectedAnswers:Answer[]
-    }[]=[];
+    const bodyData:QuizSubmitData[]=[];
 
     questionToDisplay.forEach(x=>{
       bodyData.push({
@@ -71,10 +72,10 @@ export default function QuizQuestion({ questions }: Props) {
         selectedAnswers:x.selectedAnswers
       })
     })
+   
+    dispatch(submitQuiz(bodyData))
+    navigate("/result");
 
-    axios.post('http://localhost:8080/quiz',bodyData).then((x)=>{
-      console.log(x)
-    })
   }
 
   const isChecked = (id: any) => {
@@ -99,7 +100,14 @@ export default function QuizQuestion({ questions }: Props) {
           </div>
         })}
       </div>
-
+       
+      <div className="question-numberings">
+        {questions.map((x,index)=>{
+          return <div className={questionIndex===index?'selected':""} key={index} onClick={()=>setQuestionIndex(index)}>
+               {index+1}
+          </div>
+        })}
+      </div>
 
       <div className='quiz-question-block-btns'>
 
