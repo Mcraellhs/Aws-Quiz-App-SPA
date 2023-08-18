@@ -62,19 +62,22 @@ export default function QuizQuestion({ questions }: Props) {
   }
 
   const handleSubmit = () => {
+    
+    if(window.confirm("Are you sure you want to submit ?")){
+      const bodyData:QuizSubmitData[]=[];
 
-    const bodyData:QuizSubmitData[]=[];
-
-    questionToDisplay.forEach(x=>{
-      bodyData.push({
-        id:x.question.id,
-        title:x.question.title,
-        selectedAnswers:x.selectedAnswers
+      questionToDisplay.forEach(x=>{
+        bodyData.push({
+          id:x.question.id,
+          title:x.question.title,
+          selectedAnswers:x.selectedAnswers
+        })
       })
-    })
-   
-    dispatch(submitQuiz(bodyData))
-    navigate("/result");
+     
+      dispatch(submitQuiz(bodyData))
+      navigate("/result");
+    }
+    
 
   }
 
