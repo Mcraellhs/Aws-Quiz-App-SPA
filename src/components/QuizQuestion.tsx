@@ -89,14 +89,14 @@ export default function QuizQuestion({ questions }: Props) {
   return isLoading ? <div>Loading...</div> : (
     <div className='quiz-question-component'>
       <div className="quiz-question-block">
-        {questionToDisplay[questionIndex].question.title}
+        <span>{questionToDisplay[questionIndex].question.title}</span>
       </div>
 
       <div className="quiz-question-block-answers">
         {questionToDisplay[questionIndex].question.answers.map((x) => {
-          return <div key={x.id}>
+          return <div key={x.id} className='checkbox-content'>
             <input type="checkbox" className='checkbox-pop' checked={isChecked(x.id)} onChange={(e) => handleAnswerSelect(e, x)} />
-            {x.title}
+            <span className='checkbox-title'>{x.title}</span>
           </div>
         })}
       </div>
