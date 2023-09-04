@@ -23,6 +23,9 @@ import QuestionPreview from './components/QuestionPreview';
 import { addQuestionToSingleSet, getPracticeSets } from './redux-slice/PracticeSetSlice';
 import { Link } from 'react-router-dom';
 import Result from './pages/Result';
+import './css/responsive.css';
+import AWSExams from './pages/AWSExams';
+import Socials from './pages/Socials';
 
 function App() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -113,6 +116,9 @@ function App() {
                 <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/about" element={<About />} />
+                  <Route path="/aws-exams" element={<AWSExams />} />
+                  <Route path="/socials" element={<Socials />} />
+
                   <Route path="/contact" element={<Contact />} />
                   <Route path="/quiz/practice-set/:id" element={<Quiz />} />
                   <Route path="/dashboard" element={<Dashboard />} />

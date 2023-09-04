@@ -1,0 +1,23 @@
+@media only screen and (max-width:900px) {
+
+    .left-nav-div{
+        display: none;
+    }
+
+   .main> .article{
+        display: flex;
+    }
+
+    .quiz-page{
+        display: flex;
+        justify-content: center;
+    }
+    .quiz-question-block{
+        justify-content: center;
+        width: 450px;
+    }
+
+    .quiz-question-block-btns > .submit{
+        right: 35px;
+    }
+}
