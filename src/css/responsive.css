@@ -20,4 +20,39 @@
     .quiz-question-block-btns > .submit{
         right: 35px;
     }
+
+    .article-section{
+        border: 0px;
+        
+      }
+}
+
+@media only screen and (max-width:630px){
+    .hamburger-icon>img{
+        display: block;
+        position: sticky;
+        top: 0;
+        z-index: 6;
+        cursor: pointer;
+      }
+
+      .hamburger-icon{
+        display: block;
+        position: sticky;
+        top: 0;
+        z-index: 7;
+      }
+
+      .navbar{
+        display: none;
+       
+      }
+      
+}
+
+@media only screen and (min-width:631px){
+    .navbar{
+        display: flex;
+       
+      }
 }

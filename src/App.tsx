@@ -27,6 +27,7 @@ import './css/responsive.css';
 import AWSExams from './pages/AWSExams';
 import Socials from './pages/Socials';
 
+
 function App() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [questions, setQuestions] = useState<QuestionForQuiz[]>([]);

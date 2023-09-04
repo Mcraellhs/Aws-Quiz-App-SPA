@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+
+.hamburger-icon>img{
+  position: absolute;
+  background:transparent;
+  height: 55px;
+  width: 55px;
+  display: none;
+}
