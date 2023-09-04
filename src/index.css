@@ -69,8 +69,8 @@ h1,h2,h3,a,p,span{
 
 .practice-set{
   border: 1px solid rgb(255,255,255,0.15);
-  /* background-color: rgb(236, 118, 15); */
-  background-color: rgb(184, 182, 182);
+  background-color: rgb(236, 118, 15);
+  /* background-color: rgb(184, 182, 182); */
   padding: 2%;
   margin-bottom: 5px;
   transition: background-color 0.1s;

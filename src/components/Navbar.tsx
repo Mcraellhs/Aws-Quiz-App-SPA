@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 
 export default function Navbar() {
   const [isToggledNavbar,setToggleNavbar]=useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   
   const customNavStyle:CSSProperties={
     display: 'grid',
@@ -18,19 +17,15 @@ export default function Navbar() {
   }
   
   useEffect(() => {
-    // Function to update window width
     const handleWindowResize = () => {
-      // setWindowWidth(window.innerWidth);
       if(window.innerWidth>631){
         setToggleNavbar(false)
       }
     };
 
-    // Attach the event listener when the component mounts
     window.addEventListener('resize', handleWindowResize);
     
 
-    // Clean up the event listener when the component unmounts
     return () => {
       window.removeEventListener('resize', handleWindowResize);
     };
