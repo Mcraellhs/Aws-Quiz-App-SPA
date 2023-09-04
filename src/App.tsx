@@ -26,6 +26,7 @@ import Result from './pages/Result';
 import './css/responsive.css';
 import AWSExams from './pages/AWSExams';
 import Socials from './pages/Socials';
+import AddMultipleQuestionsJSON from './pages/AddMultipleQuestionsJSON';
 
 
 function App() {
@@ -130,6 +131,7 @@ function App() {
                   <Route path="/dashboard/questions" element={<Questions />} />
                   <Route path="/dashboard/questions/list" element={<ListOfQuestions />} />
                   <Route path="/dashboard/questions/create" element={<CreateQuestion />} />
+                  <Route path="/dashboard/questions/multiple" element={<AddMultipleQuestionsJSON />} />
                   <Route path="/result" element={<Result />} />
                 </Routes>
               </div>

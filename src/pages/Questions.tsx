@@ -5,7 +5,9 @@ export default function Questions() {
   return (
     <div className='dashboard-questions'>
         <Link to="create">Add questions</Link><br />
-        <Link to="list" >List of questions  </Link>
+        <Link to="list" >List of questions  </Link><br />
+        <Link to="multiple" >Multiple with json </Link>
+
     </div>
   )
 }
