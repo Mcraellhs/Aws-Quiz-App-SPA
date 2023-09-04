@@ -33,7 +33,7 @@ export default function Summary({quizData,setSummaryDisplayed}:Props) {
             <h2>You have scored {summaryData.percentage} % </h2>
             <h2>Number of correct answers: {summaryData.correctAnswers}</h2>
             <h2>Number of wrong answers: {summaryData.wrongAnswers}</h2>
-            <button onClick={()=>setSummaryDisplayed(false)}>View Answers</button>
+            <button className='view-answers-btn' onClick={()=>setSummaryDisplayed(false)}>View Answers</button>
 
            
         </div>
