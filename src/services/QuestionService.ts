@@ -12,9 +12,14 @@ class QuestionService{
     }
 
     addQuestion(question:QuestionForAddDTO){
-
       return axios.post(this.API_URL,question);
     }
+
+    addMultipleQuestions(questions:QuestionForAddDTO[]){
+      return axios.post('http://localhost:8080/question/multi',questions);
+    }
+    
+
 
 
 }
