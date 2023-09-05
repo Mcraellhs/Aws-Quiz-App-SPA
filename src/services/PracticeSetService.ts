@@ -1,14 +1,20 @@
 import axios from "axios";
 import { PracticeSetToCreateDTO } from "../models/PracticeSetToCreateDTO";
 import { PracticeSetDTO } from "../models/PracticeSetDTO";
+import { LOCAL_HOST } from "../localhost";
 
 
 class PracticeSetService{
     
-    private API_URL="http://localhost:8080/api/practice-set";
+    private API_URL=LOCAL_HOST+"api/practice-set";
    
     public createPractice(data:PracticeSetToCreateDTO){
-        return axios.post(this.API_URL,data);
+        const token = localStorage.getItem('token');
+        const headers = {
+          Authorization: 'Bearer ' + token,
+        };
+      
+        return axios.post(this.API_URL,data,{headers});
     }
 
     public getPracticeSets(){
@@ -20,8 +26,20 @@ class PracticeSetService{
     }
 
     public updatePracticeSet(practiceSet:PracticeSetDTO,id:string){
-        console.log(id)
-        return axios.put(this.API_URL+"/"+id,practiceSet);
+        const token = localStorage.getItem('token');
+        const headers = {
+          Authorization: 'Bearer ' + token,
+        };
+      
+        return axios.put(this.API_URL+"/"+id,practiceSet,{headers});
+    }
+
+    public deletePracticeSet(id:string){
+        const token = localStorage.getItem('token');
+        const headers = {
+          Authorization: 'Bearer ' + token,
+        };
+        return axios.delete(this.API_URL+"/"+id,{headers});
     }
 }
 

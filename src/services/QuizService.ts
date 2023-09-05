@@ -1,10 +1,11 @@
 import axios from "axios"
 import { Answer } from "../models/Answer";
 import { QuizSubmitData } from "../models/QuizSubmitData";
+import { LOCAL_HOST } from "../localhost";
 
 class QuizService{
     
-    private API_URL:string="http://localhost:8080/api/question"
+    private API_URL:string=LOCAL_HOST+"api/question"
 
     constructor(){}
 

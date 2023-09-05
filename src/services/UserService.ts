@@ -1,10 +1,11 @@
 import axios from "axios";
+import { LOCAL_HOST } from "../localhost";
 
 
 class UserService{
     constructor(){}
   
-    private API_URL='http://localhost:8080/api'
+    private API_URL=LOCAL_HOST+'api'
 
 
     login(data:{username:string,password:string}){

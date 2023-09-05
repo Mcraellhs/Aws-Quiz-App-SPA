@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { PracticeSetDTO } from '../models/PracticeSetDTO'
 import { useDispatch, useSelector } from 'react-redux';
 import { getPracticeSets } from '../redux-slice/PracticeSetSlice';
+import { practiceService } from '../services/PracticeSetService';
 
 export default function PracticeSet() {
 
@@ -13,6 +14,14 @@ export default function PracticeSet() {
    useEffect(()=>{
      dispatch(getPracticeSets());
     },[])
+
+    const deletePracticeSet=(id:string)=>{
+      practiceService.deletePracticeSet(id).then(()=>{
+        alert("DELETED");
+      }).catch(()=>{
+        alert('failed to delete');
+      })
+    }
 
   return (
     <div className='practice-set-component'>
@@ -26,7 +35,7 @@ export default function PracticeSet() {
              <div> {x.title}</div>
              <div><button><Link to={x.id}>View</Link></button></div>
              <div><button><Link to={x.id+"/edit"}>Edit</Link></button></div>
-             <div><button>Delete</button></div>
+             <div><button onClick={()=>{deletePracticeSet(x.id)}}>Delete</button></div>
 
             </div>
           })}
