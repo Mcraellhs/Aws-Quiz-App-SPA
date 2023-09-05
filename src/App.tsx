@@ -29,6 +29,7 @@ import Socials from './pages/Socials';
 import AddMultipleQuestionsJSON from './pages/AddMultipleQuestionsJSON';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import PrivateRoute from './utils/PrivateRoute';
 
 
 function App() {
@@ -123,15 +124,20 @@ function App() {
                   <Route path="/socials" element={<Socials />} />
                   <Route path="/contact" element={<Contact />} />
                   <Route path="/quiz/practice-set/:id" element={<Quiz />} />
-                  <Route path="/dashboard" element={<Dashboard />} />
-                  <Route path="/dashboard/practice-set" element={<PracticeSet />} />
-                  <Route path="/dashboard/practice-set/:id" element={<PracticeSetSingle />} />
-                  <Route path="/dashboard/practice-set/create" element={<CreatePracticeSet />} />
-                  <Route path="/dashboard/practice-set/:id/edit" element={<PracticeSetEdit />} />
-                  <Route path="/dashboard/questions" element={<Questions />} />
-                  <Route path="/dashboard/questions/list" element={<ListOfQuestions />} />
-                  <Route path="/dashboard/questions/create" element={<CreateQuestion />} />
-                  <Route path="/dashboard/questions/multiple" element={<AddMultipleQuestionsJSON />} />
+
+                 <Route element={<PrivateRoute/>}>
+
+                 <Route path="/dashboard" element={<Dashboard />} />
+                   <Route path="/dashboard/practice-set" element={<PracticeSet />} />
+                   <Route path="/dashboard/practice-set/:id" element={<PracticeSetSingle />} />
+                   <Route path="/dashboard/practice-set/create" element={<CreatePracticeSet />} />
+                   <Route path="/dashboard/practice-set/:id/edit" element={<PracticeSetEdit />} />
+                   <Route path="/dashboard/questions" element={<Questions />} />
+                   <Route path="/dashboard/questions/list" element={<ListOfQuestions />} />
+                   <Route path="/dashboard/questions/create" element={<CreateQuestion />} />
+                   <Route path="/dashboard/questions/multiple" element={<AddMultipleQuestionsJSON />} />
+                 </Route>
+
                   <Route path="/result" element={<Result />} />
 
                   <Route path="/login" element={<Login />} />

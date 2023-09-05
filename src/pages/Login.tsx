@@ -9,7 +9,11 @@ export default function Login() {
   
     const handleSubmit = (e: React.FormEvent) => {
       e.preventDefault();
-      userService.login({username,password}).catch(()=>{
+      userService.login({username,password})
+      .then(x=>{
+        localStorage.setItem('token',x.data.data);
+      })
+      .catch(()=>{
         alert("Not found")
       });
     };
