@@ -4,7 +4,7 @@ import { QuizSubmitData } from "../models/QuizSubmitData";
 
 class QuizService{
     
-    private API_URL:string="http://localhost:8080/question"
+    private API_URL:string="http://localhost:8080/api/question"
 
     constructor(){}
 
@@ -13,7 +13,7 @@ class QuizService{
     }
 
     submitQuiz(data:QuizSubmitData[]){
-      return axios.post('http://localhost:8080/quiz',data)
+      return axios.post('http://localhost:8080/api/quiz',data)
     }
 
 

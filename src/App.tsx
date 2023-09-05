@@ -27,6 +27,8 @@ import './css/responsive.css';
 import AWSExams from './pages/AWSExams';
 import Socials from './pages/Socials';
 import AddMultipleQuestionsJSON from './pages/AddMultipleQuestionsJSON';
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 
 function App() {
@@ -38,7 +40,6 @@ function App() {
   const [questionPreview, setQuestionPreview] = useState<any>();
   const dispatch = useDispatch<any>();
   const selector = useSelector((state: any) => state.practiceSet);
-  const navigate = useNavigate();
 
   useEffect(() => {
     quizService.getQuestions().then((x) => {
@@ -58,7 +59,7 @@ function App() {
     dispatch(addQuestionToSingleSet(x));
   };
 
-  const handleNavigate = () => {};
+  
 
   return (
     <div>
@@ -120,7 +121,6 @@ function App() {
                   <Route path="/about" element={<About />} />
                   <Route path="/aws-exams" element={<AWSExams />} />
                   <Route path="/socials" element={<Socials />} />
-
                   <Route path="/contact" element={<Contact />} />
                   <Route path="/quiz/practice-set/:id" element={<Quiz />} />
                   <Route path="/dashboard" element={<Dashboard />} />
@@ -133,6 +133,11 @@ function App() {
                   <Route path="/dashboard/questions/create" element={<CreateQuestion />} />
                   <Route path="/dashboard/questions/multiple" element={<AddMultipleQuestionsJSON />} />
                   <Route path="/result" element={<Result />} />
+
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/register" element={<Register />} />
+
+
                 </Routes>
               </div>
             )}

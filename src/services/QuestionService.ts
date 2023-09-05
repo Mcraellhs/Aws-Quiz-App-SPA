@@ -4,11 +4,10 @@ import { QuestionForAddDTO } from "../models/QuestionForAddDTO";
 
 class QuestionService{
 
-    private API_URL:string="http://localhost:8080/question"
+    private API_URL:string="http://localhost:8080/api/question"
 
     getAllQuestions(){
-      const encodedUrl = `http://localhost:8080/question/all`;
-      return axios.get(encodedUrl);
+      return axios.get(this.API_URL+"/all");
     }
 
     addQuestion(question:QuestionForAddDTO){
@@ -16,7 +15,7 @@ class QuestionService{
     }
 
     addMultipleQuestions(questions:QuestionForAddDTO[]){
-      return axios.post('http://localhost:8080/question/multi',questions);
+      return axios.post(this.API_URL+"/multi",questions);
     }
     
 

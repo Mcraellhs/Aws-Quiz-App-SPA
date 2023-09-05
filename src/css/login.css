@@ -1,0 +1,24 @@
+.login-form-group>input{
+    background: transparent;
+    height: 30px;
+    width: 200px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+}
+
+.login-btn{
+  height: 30px;
+  background: transparent;
+  color: white;
+  font-family: f1;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.login-btn:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    padding: 5px;
+}

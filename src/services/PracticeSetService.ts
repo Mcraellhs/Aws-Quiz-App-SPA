@@ -5,7 +5,7 @@ import { PracticeSetDTO } from "../models/PracticeSetDTO";
 
 class PracticeSetService{
     
-    private API_URL="http://localhost:8080/practice-set";
+    private API_URL="http://localhost:8080/api/practice-set";
    
     public createPractice(data:PracticeSetToCreateDTO){
         return axios.post(this.API_URL,data);
