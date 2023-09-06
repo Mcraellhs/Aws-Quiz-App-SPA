@@ -150,6 +150,7 @@ function App() {
           </div>
         </div>
       </div>
+      <div className='version-label'>Version: Beta 1.0 (Development)</div>
     </div>
   );
 }

@@ -45,3 +45,12 @@
   width: 55px;
   display: none;
 }
+
+.version-label{
+  font-family: f1-regular;
+  color: #d7d2d2;
+  font-size: 13px;
+  position: sticky;
+  bottom: 0;
+
+}
