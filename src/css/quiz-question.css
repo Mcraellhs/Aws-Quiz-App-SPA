@@ -27,7 +27,7 @@
 
 .quiz-question-block-answers{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     position: absolute;
     top: 120px;
     flex-direction: column;
