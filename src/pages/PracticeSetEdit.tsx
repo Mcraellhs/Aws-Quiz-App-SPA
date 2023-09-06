@@ -15,7 +15,6 @@ export default function PracticeSetEdit() {
       const practiceSetId=param.id;
       if(practiceSetId){
         dispatch(getPracticeSetById(practiceSetId))
-        console.log(practiceSetId)
         
       }
     },[])

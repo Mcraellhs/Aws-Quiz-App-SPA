@@ -12,7 +12,6 @@ export default function AddMultipleQuestionsJSON() {
   function handleSubmit(): void {
     const jsonParsed=JSON.parse(multiQuestions);
 
-    console.log(jsonParsed)
 
     questionService.addMultipleQuestions(jsonParsed).then(()=>{
       alert('Questions submited');

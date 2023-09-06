@@ -14,7 +14,7 @@ class QuizService{
     }
 
     submitQuiz(data:QuizSubmitData[]){
-      return axios.post('http://localhost:8080/api/quiz',data)
+      return axios.post(LOCAL_HOST+'/api/quiz',data)
     }
 
 
